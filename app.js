@@ -35,6 +35,11 @@ const createCustomer = async () => {
     console.log("New Customer:",customer)
 };
 
+//View all customers
+const viewCustomers = async () => {
+    const allCustomers = await Customer.find({});
+    console.log(allCustomers);
+}
 
 
 
