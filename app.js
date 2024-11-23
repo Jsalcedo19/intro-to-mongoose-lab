@@ -22,7 +22,7 @@ connect();
 //code modified by chat GPT
 const main = async () => {
     console.log("Welcome to the CRM");
-    console.log('What would you like to do?');
+
     let shouldRun = true;
   
     while (shouldRun) {
@@ -93,7 +93,7 @@ const updateCustomer = async () => {
     }
 };
 
-// Delete a customer
+// Delete customer
 const deleteCustomer = async () => {
     const id = prompt('Enter the ID of the customer to delete: ');
   
