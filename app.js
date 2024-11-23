@@ -5,7 +5,7 @@ const Customer = require('./models/customer.js');
 const dotenv = require('dotenv');
 dotenv.config();
 
-//used chatGPT for this block of code.
+//used chatGPT for the try and catch statements
 const connect = async () => {
     try {
         await mongoose.connect(process.env.MONGODB_URI,);
@@ -22,14 +22,22 @@ console.log('Welcome to the CRM');
 
 console.log('What would you like to do?');
 
+//create new customer
+const createCustomer = async () => {
+    const name = prompt('Enter customer name: ');
+    const age = parseInt(prompt('Enter customer age: '));
+
+    const customerData = {
+        name: customerName,
+        age: customerAge,
+        };
+    const customer = await Customer.create(customerData);
+    console.log("New Customer:",customer)
+};
 
 
 
 
-
-//const username = prompt('What is your name? ');
-
-//console.log(`Your name is ${username}`);
 
 
 
