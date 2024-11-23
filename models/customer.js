@@ -17,4 +17,4 @@ const customerSchema = new mongoose.Schema({
 const Customer = mongoose.model('Customer',customerSchema);
 
 //exports the model so that it can be used throughout the app.
-model.exports = Customer;
+module.exports = Customer;
